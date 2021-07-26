@@ -71,7 +71,7 @@ async def _(event):
         except:
             print("TO_CHANNEL ID is wrong or I can't send messages there (make me admin).")
 
-            @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+@datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
 async def _(event1): 
     if not event1.is_private:
         try:
@@ -94,7 +94,7 @@ async def _(event1):
         except:
             print("TO_CHANNEL ID1 is wrong or I can't send messages there (make me admin).")
 
-            @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+@datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
 async def _(event2): 
     if not event2.is_private:
         try:
@@ -117,7 +117,7 @@ async def _(event2):
         except:
             print("TO_CHANNEL ID2 is wrong or I can't send messages there (make me admin).")
 
-            @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+@datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
 async def _(event3): 
     if not event3.is_private:
         try:
