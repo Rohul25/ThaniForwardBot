@@ -28,7 +28,8 @@ try:
     bottoken = config("BOT_TOKEN")
     frm = config("FROM_CHANNEL", cast=int)
     #tochnl = config("TO_CHANNEL", cast=int)
-    tochnl = list(int(i) for i in os.environ.get("TO_CHANNEL", "").split(" "))
+    tochnl = config("TO_CHANNEL", cast=int)
+    TO_CHANNEL = set(int(x) for x in os.environ.get("TO_CHANNEL", "").split())
     datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
 except:
     print("Environment vars are missing! Kindly recheck.")
