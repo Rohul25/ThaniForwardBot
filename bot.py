@@ -27,8 +27,8 @@ try:
     apihash = config("API_HASH")
     bottoken = config("BOT_TOKEN")
     frm = config("FROM_CHANNEL", cast=int)
-    tochnl = config("TO_CHANNEL", cast=int)
-    tochnl = tochnl.split()
+    #tochnl = config("TO_CHANNEL", cast=int)
+    TO_CHANNEL = list(int(i) for i in os.environ.get("TO_CHANNEL", "").split(" "))
     datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
 except:
     print("Environment vars are missing! Kindly recheck.")
@@ -54,18 +54,18 @@ async def _(event):
                 return
             if event.photo:
                 photo = event.media.photo
-                await datgbot.send_file(tochnl, photo, caption = event.text, link_preview = False)
+                await datgbot.send_file(TO_CHANNEL, photo, caption = event.text, link_preview = False)
             elif event.media:
                 try:
                     if event.media.webpage:
-                        await datgbot.send_message(tochnl, event.text, link_preview = False)
+                        await datgbot.send_message(TO_CHANNEL, event.text, link_preview = False)
                         return
                 except:
                     media = event.media.document
-                    await datgbot.send_file(tochnl, media, caption = event.text, link_preview = False)
+                    await datgbot.send_file(TO_CHANNEL, media, caption = event.text, link_preview = False)
                     return
             else:
-                await datgbot.send_message(tochnl, event.text, link_preview = False)
+                await datgbot.send_message(TO_CHANNEL, event.text, link_preview = False)
         except:
             print("TO_CHANNEL ID is wrong or I can't send messages there (make me admin).")
 
