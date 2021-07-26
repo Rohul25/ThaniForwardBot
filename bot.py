@@ -1,39 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@AsuranJ
-AsuranJ /
-ChannelAutoPost
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-ChannelAutoPost/bot.py /
-@AsuranJ
-AsuranJ Update bot.py
-Latest commit c5d2a8c 4 minutes ago
-History
-3 contributors
-@AsuranJ
-@leeveshkamboj
-@xditya
-76 lines (66 sloc) 3.56 KB
 #    This file is part of the ChannelAutoForwarder distribution (https://github.com/xditya/ChannelAutoForwarder).
 #    Copyright (c) 2021 Adiya
 #    
@@ -111,18 +75,3 @@ async def _(event):
 print("Bot has started.")
 print("Do visit JAsuran")
 datgbot.run_until_disconnected()
-
-    © 2021 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
