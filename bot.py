@@ -56,20 +56,89 @@ async def _(event):
                 return
             if event.photo:
                 photo = event.media.photo
-                await datgbot.send_file(tochnl, tochnl1, tochnl2, tochnl3, photo, caption = event.text, link_preview = False)
+                await datgbot.send_file(tochnl, photo, caption = event.text, link_preview = False)
             elif event.media:
                 try:
                     if event.media.webpage:
-                        await datgbot.send_message(tochnl, tochnl1, tochnl2, tochnl3, event.text, link_preview = False)
+                        await datgbot.send_message(tochnl, event.text, link_preview = False)
                         return
                 except:
                     media = event.media.document
-                    await datgbot.send_file(tochnl, tochnl1, tochnl2, tochnl3, media, caption = event.text, link_preview = False)
+                    await datgbot.send_file(tochnl, media, caption = event.text, link_preview = False)
                     return
             else:
-                await datgbot.send_message(tochnl, tochnl1, tochnl2, tochnl3, event.text, link_preview = False)
+                await datgbot.send_message(tochnl, event.text, link_preview = False)
         except:
             print("TO_CHANNEL ID is wrong or I can't send messages there (make me admin).")
+
+            @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+async def _(event): 
+    if not event.is_private:
+        try:
+            if event.poll:
+                return
+            if event.photo:
+                photo = event.media.photo
+                await datgbot.send_file(tochnl1, photo, caption = event.text, link_preview = False)
+            elif event.media:
+                try:
+                    if event.media.webpage:
+                        await datgbot.send_message(tochnl1, event.text, link_preview = False)
+                        return
+                except:
+                    media = event.media.document
+                    await datgbot.send_file(tochnl1, media, caption = event.text, link_preview = False)
+                    return
+            else:
+                await datgbot.send_message(tochnl1, event.text, link_preview = False)
+        except:
+            print("TO_CHANNEL ID1 is wrong or I can't send messages there (make me admin).")
+
+            @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+async def _(event): 
+    if not event.is_private:
+        try:
+            if event.poll:
+                return
+            if event.photo:
+                photo = event.media.photo
+                await datgbot.send_file(tochnl2, photo, caption = event.text, link_preview = False)
+            elif event.media:
+                try:
+                    if event.media.webpage:
+                        await datgbot.send_message(tochnl2, event.text, link_preview = False)
+                        return
+                except:
+                    media = event.media.document
+                    await datgbot.send_file(tochnl2, media, caption = event.text, link_preview = False)
+                    return
+            else:
+                await datgbot.send_message(tochnl2, event.text, link_preview = False)
+        except:
+            print("TO_CHANNEL ID2 is wrong or I can't send messages there (make me admin).")
+
+            @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+async def _(event): 
+    if not event.is_private:
+        try:
+            if event.poll:
+                return
+            if event.photo:
+                photo = event.media.photo
+                await datgbot.send_file(tochnl3, photo, caption = event.text, link_preview = False)
+            elif event.media:
+                try:
+                    if event.media.webpage:
+                        await datgbot.send_message(tochnl3, event.text, link_preview = False)
+                        return
+                except:
+                    media = event.media.document
+                    await datgbot.send_file(tochnl3, media, caption = event.text, link_preview = False)
+                    return
+            else:
+                await datgbot.send_message(tochnl3, event.text, link_preview = False)
+        except:
+            print("TO_CHANNEL ID3 is wrong or I can't send messages there (make me admin).")
 
 
 print("Bot has started.")
