@@ -1,3 +1,39 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@AsuranJ
+AsuranJ /
+ChannelAutoPost
+
+1
+0
+
+    0
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+ChannelAutoPost/bot.py /
+@AsuranJ
+AsuranJ Update bot.py
+Latest commit c5d2a8c 4 minutes ago
+History
+3 contributors
+@AsuranJ
+@leeveshkamboj
+@xditya
+76 lines (66 sloc) 3.56 KB
 #    This file is part of the ChannelAutoForwarder distribution (https://github.com/xditya/ChannelAutoForwarder).
 #    Copyright (c) 2021 Adiya
 #    
@@ -27,9 +63,10 @@ try:
     apihash = config("API_HASH")
     bottoken = config("BOT_TOKEN")
     frm = config("FROM_CHANNEL", cast=int)
-    #tochnl = config("TO_CHANNEL", cast=int)
     tochnl = config("TO_CHANNEL", cast=int)
-    TO_CHANNEL = set(int(x) for x in os.environ.get("TO_CHANNEL", "").split())
+    tochnl1 = config("TO_CHANNEL1", cast=int)
+    tochnl2 = config("TO_CHANNEL2", cast=int)
+    tochnl3 = config("TO_CHANNEL3", cast=int)
     datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
 except:
     print("Environment vars are missing! Kindly recheck.")
@@ -40,12 +77,12 @@ except:
 @datgbot.on(events.NewMessage(pattern="/start"))
 async def _(event):
     ok = await datgbot(GetFullUserRequest(event.sender_id))
-    await event.reply(f"Hi `{ok.user.first_name}`!\n\nI am a channel auto-post bot!! Read /help to know more!\n\nI can be used in only two channels (one user) at a time. Kindly deploy your own bot.\n\n[More bots](https://t.me/its_xditya)..", buttons=[Button.url("Repo", url="https://github.com/xditya/ChannelAutoForwarder"), Button.url("Dev", url="https://t.me/its_xditya")], link_preview=False)
+    await event.reply(f"Hi `{ok.user.first_name}`!\n\nI am a channel auto-post bot!! Read /help to know more!\n\nI can be used in only two channels (one user) at a time. Kindly deploy your own bot.\n\n[More bots](https://t.me/its_xditya)..", buttons=[Button.url("Repo", url="https://github.com/xditya/ChannelAutoForwarder"), Button.url("Dev", url="https://t.me/JAsuran123")], link_preview=False)
 
 
 @datgbot.on(events.NewMessage(pattern="/help"))
 async def helpp(event):
-    await event.reply("**Help**\n\nThis bot will send all new posts in one channel to the other channel. (without forwarded tag)!\nIt can be used only in two channels at a time, so kindly deploy your own bot from [here](https://github.com/xditya/ChannelAutoForwarder).\n\nAdd me to both the channels and make me an admin in both, and all new messages would be autoposted on the linked channel!!\n\nLiked the bot? Drop a ♥ to @xditya_Bot :)")
+    await event.reply("**Help**\n\nThis bot will send all new posts in one channel to the other channel. (without forwarded tag)!\nIt can be used only in two channels at a time, so kindly deploy your own bot from [here](https://github.com/xditya/ChannelAutoForwarder).\n\nAdd me to both the channels and make me an admin in both, and all new messages would be autoposted on the linked channel!!\n\nLiked the bot? Drop a ♥ to @JAsuran123 :)")
 
 @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
 async def _(event): 
@@ -55,22 +92,37 @@ async def _(event):
                 return
             if event.photo:
                 photo = event.media.photo
-                await datgbot.send_file(tochnl, photo, caption = event.text, link_preview = False)
+                await datgbot.send_file(tochnl, tochnl1, tochnl2, tochnl3, photo, caption = event.text, link_preview = False)
             elif event.media:
                 try:
                     if event.media.webpage:
-                        await datgbot.send_message(tochnl, event.text, link_preview = False)
+                        await datgbot.send_message(tochnl, tochnl1, tochnl2, tochnl3, event.text, link_preview = False)
                         return
                 except:
                     media = event.media.document
-                    await datgbot.send_file(tochnl, media, caption = event.text, link_preview = False)
+                    await datgbot.send_file(tochnl, tochnl1, tochnl2, tochnl3, media, caption = event.text, link_preview = False)
                     return
             else:
-                await datgbot.send_message(tochnl, event.text, link_preview = False)
+                await datgbot.send_message(tochnl, tochnl1, tochnl2, tochnl3, event.text, link_preview = False)
         except:
             print("TO_CHANNEL ID is wrong or I can't send messages there (make me admin).")
 
 
 print("Bot has started.")
-print("Do visit @its_xditya..")
+print("Do visit JAsuran")
 datgbot.run_until_disconnected()
+
+    © 2021 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
