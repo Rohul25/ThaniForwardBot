@@ -72,71 +72,71 @@ async def _(event):
             print("TO_CHANNEL ID is wrong or I can't send messages there (make me admin).")
 
             @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
-async def _(event): 
-    if not event.is_private:
+async def _(event1): 
+    if not event1.is_private:
         try:
-            if event.poll:
+            if event1.poll:
                 return
-            if event.photo:
-                photo = event.media.photo
-                await datgbot.send_file(tochnl1, photo, caption = event.text, link_preview = False)
-            elif event.media:
+            if event1.photo:
+                photo = event1.media.photo
+                await datgbot.send_file(tochnl1, photo, caption = event1.text, link_preview = False)
+            elif event1.media:
                 try:
-                    if event.media.webpage:
-                        await datgbot.send_message(tochnl1, event.text, link_preview = False)
+                    if event1.media.webpage:
+                        await datgbot.send_message(tochnl1, event1.text, link_preview = False)
                         return
                 except:
-                    media = event.media.document
-                    await datgbot.send_file(tochnl1, media, caption = event.text, link_preview = False)
+                    media = event1.media.document
+                    await datgbot.send_file(tochnl1, media, caption = event1.text, link_preview = False)
                     return
             else:
-                await datgbot.send_message(tochnl1, event.text, link_preview = False)
+                await datgbot.send_message(tochnl1, event1.text, link_preview = False)
         except:
             print("TO_CHANNEL ID1 is wrong or I can't send messages there (make me admin).")
 
             @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
-async def _(event): 
-    if not event.is_private:
+async def _(event2): 
+    if not event2.is_private:
         try:
-            if event.poll:
+            if event2.poll:
                 return
-            if event.photo:
-                photo = event.media.photo
-                await datgbot.send_file(tochnl2, photo, caption = event.text, link_preview = False)
-            elif event.media:
+            if event2.photo:
+                photo = event2.media.photo
+                await datgbot.send_file(tochnl2, photo, caption = event2.text, link_preview = False)
+            elif event2.media:
                 try:
-                    if event.media.webpage:
-                        await datgbot.send_message(tochnl2, event.text, link_preview = False)
+                    if event2.media.webpage:
+                        await datgbot.send_message(tochnl2, event2.text, link_preview = False)
                         return
                 except:
-                    media = event.media.document
-                    await datgbot.send_file(tochnl2, media, caption = event.text, link_preview = False)
+                    media = event2.media.document
+                    await datgbot.send_file(tochnl2, media, caption = event2.text, link_preview = False)
                     return
             else:
-                await datgbot.send_message(tochnl2, event.text, link_preview = False)
+                await datgbot.send_message(tochnl2, event2.text, link_preview = False)
         except:
             print("TO_CHANNEL ID2 is wrong or I can't send messages there (make me admin).")
 
             @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
-async def _(event): 
-    if not event.is_private:
+async def _(event3): 
+    if not event3.is_private:
         try:
-            if event.poll:
+            if event3.poll:
                 return
-            if event.photo:
-                photo = event.media.photo
-                await datgbot.send_file(tochnl3, photo, caption = event.text, link_preview = False)
-            elif event.media:
+            if event3.photo:
+                photo = event3.media.photo
+                await datgbot.send_file(tochnl3, photo, caption = event3.text, link_preview = False)
+            elif event3.media:
                 try:
-                    if event.media.webpage:
-                        await datgbot.send_message(tochnl3, event.text, link_preview = False)
+                    if event3.media.webpage:
+                        await datgbot.send_message(tochnl3, event3.text, link_preview = False)
                         return
                 except:
-                    media = event.media.document
-                    await datgbot.send_file(tochnl3, media, caption = event.text, link_preview = False)
+                    media = event3.media.document
+                    await datgbot.send_file(tochnl3, media, caption = event3.text, link_preview = False)
                     return
             else:
-                await datgbot.send_message(tochnl3, event.text, link_preview = False)
+                await datgbot.send_message(tochnl3, event3.text, link_preview = False)
         except:
             print("TO_CHANNEL ID3 is wrong or I can't send messages there (make me admin).")
 
