@@ -139,6 +139,28 @@ async def _(event3):
                 await datgbot.send_message(tochnl3, event3.text, link_preview = False)
         except:
             print("TO_CHANNEL ID3 is wrong or I can't send messages there (make me admin).")
+@datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+async def _(event4): 
+    if not event4.is_private:
+        try:
+            if event4.poll:
+                return
+            if event4.photo:
+                photo = event4.media.photo
+                await datgbot.send_file(tochnl4, photo, caption = event4.text, link_preview = False)
+            elif event4.media:
+                try:
+                    if event4.media.webpage:
+                        await datgbot.send_message(tochnl4, event4.text, link_preview = False)
+                        return
+                except:
+                    media = event4.media.document
+                    await datgbot.send_file(tochnl4, media, caption = event4.text, link_preview = False)
+                    return
+            else:
+                await datgbot.send_message(tochnl4, event4.text, link_preview = False)
+        except:
+            print("TO_CHANNEL ID4 is wrong or I can't send messages there (make me admin).")
 
 
 print("Bot has started.")
