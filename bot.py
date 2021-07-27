@@ -31,6 +31,7 @@ try:
     tochnl1 = config("TO_CHANNEL1", cast=int)
     tochnl2 = config("TO_CHANNEL2", cast=int)
     tochnl3 = config("TO_CHANNEL3", cast=int)
+    tochnl4 = config("TO_CHANNEL4", cast=int)
     datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
 except:
     print("Environment vars are missing! Kindly recheck.")
