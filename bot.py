@@ -35,6 +35,7 @@ try:
     tochnl5 = config("TO_CHANNEL5", cast=int)
     tochnl6 = config("TO_CHANNEL6", cast=int)
     tochnl7 = config("TO_CHANNEL7", cast=int)
+    tochnl8 = config("TO_CHANNEL8", cast=int)
     datgbot = TelegramClient('bot', apiid, apihash).start(bot_token=bottoken)
 except:
     print("Environment vars are missing! Kindly recheck.")
@@ -232,6 +233,28 @@ async def _(event7):
                 await datgbot.send_message(tochnl7, event7.text, link_preview = False)
         except:
             print("TO_CHANNEL ID7 is wrong or I can't send messages there (make me admin).")
+@datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+async def _(event8): 
+    if not event8.is_private:
+        try:
+            if event8.poll:
+                return
+            if event8.photo:
+                photo = event8.media.photo
+                await datgbot.send_file(tochnl8, photo, caption = event8.text, link_preview = False)
+            elif event8.media:
+                try:
+                    if event8.media.webpage:
+                        await datgbot.send_message(tochnl8, event8.text, link_preview = False)
+                        return
+                except:
+                    media = event8.media.document
+                    await datgbot.send_file(tochnl8, media, caption = event8.text, link_preview = False)
+                    return
+            else:
+                await datgbot.send_message(tochnl8, event8.text, link_preview = False)
+        except:
+            print("TO_CHANNEL ID8 is wrong or I can't send messages there (make me admin).")
 
 print("Bot has started.")
 print("Do visit JAsuran")
