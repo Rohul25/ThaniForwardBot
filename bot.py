@@ -28,6 +28,7 @@ try:
     bottoken = config("BOT_TOKEN")
     frm = config("FROM_CHANNEL", cast=int)
     tochnl = config("TO_CHANNEL", cast=int)
+    tochnl0 = config("TO_CHANNEL0", cast=int)
     tochnl1 = config("TO_CHANNEL1", cast=int)
     tochnl2 = config("TO_CHANNEL2", cast=int)
     tochnl3 = config("TO_CHANNEL3", cast=int)
@@ -75,6 +76,30 @@ async def _(event):
                 await datgbot.send_message(tochnl, event.text, link_preview = False)
         except:
             print("TO_CHANNEL ID is wrong or I can't send messages there (make me admin).")
+
+##
+@datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
+async def _(event0): 
+    if not event0.is_private:
+        try:
+            if event0.poll:
+                return
+            if event0.photo:
+                photo = event0.media.photo
+                await datgbot.send_file(tochnl0, photo, caption = event0.text, link_preview = False)
+            elif event0.media:
+                try:
+                    if event0.media.webpage:
+                        await datgbot.send_message(tochnl0, event0.text, link_preview = False)
+                        return
+                except:
+                    media = event0.media.document
+                    await datgbot.send_file(tochnl0, media, caption = event0.text, link_preview = False)
+                    return
+            else:
+                await datgbot.send_message(tochnl0, event1.text, link_preview = False)
+        except:
+            print("TO_CHANNEL ID0 is wrong or I can't send messages there (make me admin).")
 
 @datgbot.on(events.NewMessage(incoming=True, chats=frm)) 
 async def _(event1): 
