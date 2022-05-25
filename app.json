@@ -6,9 +6,9 @@
     "python",
     "sample"
   ],
-  "repository": "https://github.com/yefim/flask-heroku-sample",
-  "scripts": {
-    "postdeploy": "python -c 'from bot import db; db.create_all()'"
+  "repository": "https://github.com/yefim/flask-heroku-sample"#,
+  #"scripts": {
+   # "postdeploy": "python -c 'from bot import db; db.create_all()'"
   },
   "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
