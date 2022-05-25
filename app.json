@@ -68,8 +68,7 @@
     "FROM_CHANNEL": {
       "description": "enter Channel username Eg:- @abcdefghijk",
       "value": ""
-    }
-  },
+    },
    "buildpacks": [
         {
             "url": "heroku/python"
@@ -84,3 +83,4 @@
       "size": "free"
     }
   }
+}
