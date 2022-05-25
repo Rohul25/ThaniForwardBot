@@ -64,7 +64,7 @@
     "TO_CHANNEL8": {
       "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
       "value": ""
-    }
+    },
     "FROM_CHANNEL": {
       "description": "enter Channel username Eg:- @abcdefghijk",
       "value": ""
