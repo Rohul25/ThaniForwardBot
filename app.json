@@ -6,76 +6,11 @@
     "python",
     "sample"
   ],
-  "success_url": "https://t.me/JAsuran123",
-  "website": "https://github.com/AsuranJ",
-  "repository": "https://github.com/AsuranJ",
+  "repository": "https://github.com/yefim/flask-heroku-sample",
   "scripts": {
-    "postdeploy": "python -c 'from bot import db; db.create_all()'"
+    "postdeploy": "python -c 'from app import db; db.create_all()'"
   },
-  "env": {
-    "APP_ID": {
-      "description": "Get this value from https://my.telegram.org or @UseTGXBot",
-      "value": ""
-    },
-    "API_HASH": {
-      "description": "Get this value from https://my.telegram.org or @UseTGXBot",
-      "value": ""
-    },
-    "BOT_TOKEN": {
-      "description": "Your bot token from @BotFather",
-      "value": ""
-    },
-    "TO_CHANNEL": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL0": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL1": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL2": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL3": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL4": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL5": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL6": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL7": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "TO_CHANNEL8": {
-      "description": "Enter Your channel Id must add Eg:- -100xxxxxxxxx",
-      "value": ""
-    },
-    "FROM_CHANNEL": {
-      "description": "enter Channel username Eg:- @abcdefghijk",
-      "value": ""
-    },
   "addons": [
     "heroku-postgresql"
-  ],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
+  ]
 }
