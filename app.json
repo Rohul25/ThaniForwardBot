@@ -7,6 +7,7 @@
     "sample"
   ],
   "repository": "https://github.com/yefim/flask-heroku-sample",
+  "env": {
   "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
@@ -66,6 +67,18 @@
     "TO_CHANNEL9": {
       "description": "Your bot token from @botfather, as a string.",
       "value": "True"
+    }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
     },
   "addons": [
     "heroku-postgresql"
