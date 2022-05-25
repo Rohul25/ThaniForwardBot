@@ -69,17 +69,6 @@
       "value": "-100"
     }
     },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    },
   "addons": [
     "heroku-postgresql"
   ]
