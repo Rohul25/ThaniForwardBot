@@ -1,10 +1,10 @@
 {
-  "name": "Auto-Forward-Bot",
-  "description": "Telegram's Best Smart Plugin File Forward Bot",
+  "name": "Flask Heroku Sample",
+  "description": "A sample Flask app on Heroku",
   "keywords": [
-    "telegram",
-    "forward",
-    "bot"
+    "flask",
+    "python",
+    "sample"
   ],
   "success_url": "https://t.me/JAsuran123",
   "website": "https://github.com/AsuranJ",
