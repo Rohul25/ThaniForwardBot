@@ -69,11 +69,6 @@
       "description": "enter Channel username Eg:- @abcdefghijk",
       "value": ""
     },
-   "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
   "addons": [
     "heroku-postgresql"
   ],
