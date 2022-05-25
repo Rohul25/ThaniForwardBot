@@ -1,17 +1,17 @@
 {
   "name": "Auto-Forward-Bot",
   "description": "Telegram's Best Smart Plugin File Forward Bot",
-  "logo": "https://telegra.ph/file/aee1484f6f68cfe23aa78.jpg",
   "keywords": [
     "telegram",
-    "best",
-    "file",
     "forward",
     "bot"
   ],
-  "success_url": "https://t.me/World_MoViezZ",
-  "website": "https://github.com/kpsabith/File-Auto-Forword-Bot",
-  "repository": "https://github.com/kpsabith/File-Auto-Forword-Bot",
+  "success_url": "https://t.me/JAsuran123",
+  "website": "https://github.com/AsuranJ",
+  "repository": "https://github.com/AsuranJ",
+  "scripts": {
+    "postdeploy": "python -c 'from bot import db; db.create_all()'"
+  },
   "env": {
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org or @UseTGXBot",
