@@ -74,6 +74,7 @@
         {
             "url": "heroku/python"
         }
+    ],
   "formation": {
     "worker": {
       "quantity": 1,
