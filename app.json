@@ -46,27 +46,27 @@
     },
     "TO_CHANNEL4": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "false"
+      "required": false
     },
     "TO_CHANNEL5": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "false"
+      "required": false
     },
     "TO_CHANNEL6": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "false"
+      "required": false
     },
     "TO_CHANNEL7": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "false"
+      "required": false
     },
     "TO_CHANNEL8": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "false"
+      "required": false
     },
     "TO_CHANNEL9": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "false"
+      "required": false
     }
     },
   "addons": [
