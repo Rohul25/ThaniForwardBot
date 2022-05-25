@@ -10,6 +10,66 @@
   "scripts": {
     "postdeploy": "python -c 'from bot import db; db.create_all()'"
   },
+  "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": ""
+    },
+    "FROM_CHANNEL": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL0": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL1": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL2": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL3": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL4": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL5": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL6": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL7": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL8": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
+    "TO_CHANNEL9": {
+      "description": "Your bot token from @botfather, as a string.",
+      "value": "True"
+    },
   "addons": [
     "heroku-postgresql"
   ]
