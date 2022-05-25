@@ -22,51 +22,51 @@
     },
     "FROM_CHANNEL": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL0": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL1": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL2": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL3": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL4": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL5": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL6": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL7": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL8": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     },
     "TO_CHANNEL9": {
       "description": "Your bot token from @botfather, as a string.",
-      "value": "-100"
+      "value": ""
     }
     },
   "addons": [
