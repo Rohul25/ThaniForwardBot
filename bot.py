@@ -19,13 +19,13 @@ from decouple import config
 from telethon.tl.functions.users import GetFullUserRequest
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.INFO)
-
+client = TelegramClient('anfghohn', int(os.environ.get("APP_ID" )), os.environ.get("API_HASH")).start(bot_token= os.environ.get("BOT_TOKEN"))
 # start the bot
 print("Starting...")
 try:
-    apiid = config("APP_ID", cast=int)
-    apihash = config("API_HASH")
-    bottoken = config("BOT_TOKEN")
+    #apiid = config("APP_ID", cast=int)
+    #apihash = config("API_HASH")
+    #bottoken = config("BOT_TOKEN")
     frm = config("FROM_CHANNEL", cast=int)
     tochnl = config("TO_CHANNEL", cast=int)
     tochnl0 = config("TO_CHANNEL0", cast=int)
