@@ -13,7 +13,7 @@
   "website": "https://github.com/kpsabith/File-Auto-Forword-Bot",
   "repository": "https://github.com/kpsabith/File-Auto-Forword-Bot",
   "env": {
-    "API_ID": {
+    "APP_ID": {
       "description": "Get this value from https://my.telegram.org or @UseTGXBot",
       "value": ""
     },
