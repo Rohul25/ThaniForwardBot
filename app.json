@@ -8,7 +8,7 @@
   ],
   "repository": "https://github.com/yefim/flask-heroku-sample",
   "scripts": {
-    "postdeploy": "python -c 'from app import db; db.create_all()'"
+    "postdeploy": "python -c 'from bot import db; db.create_all()'"
   },
   "addons": [
     "heroku-postgresql"
