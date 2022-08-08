@@ -13,9 +13,9 @@ This bot can send all new messages from one channel, directly to another channel
 
 `* heroku git:remote -a app-name`
 
-`* git pull origin V2.0`
+`* git pull origin main`
 
-`* git push heroku V2.0:main`
+`* git push heroku main`
 
 ## Setting up 
 * First:
