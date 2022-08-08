@@ -2,7 +2,20 @@
 
 This bot can send all new messages from one channel, directly to another channel (or group, just in case), without the forwarded tag!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/AsuranJ/ChannelAutoPost/)
+
+## 🚸 HEROKU CLI COMMANDS
+
+`* git clone https://github.com/AsuranJ/ChannelAutoPost.git`
+
+`* heroku login`
+
+`* cd ChannelAutoPost`
+
+`* heroku git:remote -a app-name`
+
+`* git pull origin V2.0`
+
+`* git push heroku V2.0:main`
 
 ## Setting up 
 * First:
